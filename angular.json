@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ibank"
+    }
+  },
+  "defaultProject": "ibank",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,24 @@
+div.copyright {
+  opacity: 0.2;
+  position: absolute;
+  bottom: 10px;
+  right: auto;
+  color: var(--primaryBGColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.copyright:hover {
+  opacity: 1;
+  color: var(--white);
+}
+
+a {
+  padding: 1.2em 2em;
+  text-decoration: none;
+  color: var(--inherit);
+  background-color: var(--primaryTextColor);
+  border-radius: 10px;
+}
