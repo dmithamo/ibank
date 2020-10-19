@@ -1,5 +1,5 @@
 :root {
-  --themeTextColor: #ccc;
+  --themeTextColor: rgb(65, 65, 65);
   --themeSecondaryTextColor: #cccccc80;
   --themeBG: #fafafa;
   --themeDarker: #1e2f38;
@@ -8,4 +8,5 @@
 
 body {
   background-color: var(--themeBG) !important;
+  color: var(--themeTextColor);
 }

@@ -1,0 +1,9 @@
+a.back-btn {
+  padding: 2em 0;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+a.back-btn:hover {
+  opacity: 1;
+}

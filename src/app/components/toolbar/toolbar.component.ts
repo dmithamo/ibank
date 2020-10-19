@@ -1,6 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { ALL_ROUTES, RouteItem } from './../../utils/allTheRoutes';
-import { APP_NAME } from './../../utils/constants';
+
+interface NavItem {
+  path: string;
+  name: string;
+  isCTA?: boolean;
+}
+
+const NAV_ITEMS: NavItem[] = [
+  {
+    path: 'transactions',
+    name: 'transactions',
+  },
+  {
+    path: 'sign-in',
+    name: 'sign in',
+  },
+  {
+    path: 'sign-up',
+    name: 'sign up',
+    isCTA: true,
+  },
+];
 
 @Component({
   selector: 'app-toolbar',
@@ -9,8 +29,8 @@ import { APP_NAME } from './../../utils/constants';
 })
 export class ToolbarComponent implements OnInit {
   constructor() {}
-  get navItems(): Array<RouteItem> {
-    return ALL_ROUTES.filter((r) => !r.hideOnNav && r.name !== APP_NAME);
+  get navItems(): Array<NavItem> {
+    return NAV_ITEMS;
   }
   ngOnInit(): void {}
 }

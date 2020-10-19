@@ -44,9 +44,6 @@ body {
   min-height: 100vh;
   height: 100%;
   font-size: small;
-
-  background-color: var(--lightGrey);
-  color: var(--primaryTextColor);
   font-family: var(--primaryFont) !important;
 }
 
@@ -71,8 +68,4 @@ h6 {
 
 a {
   color: inherit;
-}
-
-div.main-container {
-  padding: 1em 2em;
 }

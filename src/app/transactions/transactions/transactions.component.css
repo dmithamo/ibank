@@ -1,0 +1,25 @@
+table,
+tr,
+th,
+td {
+  border: 1px solid var(--grey);
+  border-collapse: collapse;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: rgb(236, 236, 236);
+}
+
+th,
+td {
+  width: fit-content;
+  padding: 0.5em;
+}
+
+td.debit {
+  color: red;
+}
+
+td.credit {
+  color: green;
+}
