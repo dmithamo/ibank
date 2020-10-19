@@ -13,6 +13,10 @@ const transactionRoutes: Routes = [
         component: TransactionsComponent,
       },
       {
+        path: '',
+        component: TransactionsComponent,
+      },
+      {
         path: 'create',
         component: NewTransactionComponent,
       },
@@ -21,10 +25,6 @@ const transactionRoutes: Routes = [
         component: TransactionDetailComponent,
       },
     ],
-  },
-  {
-    path: 'transactions',
-    redirectTo: '/transactions/all',
   },
 ];
 

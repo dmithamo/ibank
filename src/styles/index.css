@@ -69,3 +69,10 @@ h6 {
 a {
   color: inherit;
 }
+
+.center-in-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

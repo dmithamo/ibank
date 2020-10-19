@@ -1,22 +1,26 @@
-<div class="card">
-  <a class="back-btn ease-in-out" routerLink="goToTransactions()">Back</a>
-  <h2>Transaction ID: {{ transactionID }}</h2>
-  <span [ngSwitch]="transaction !== undefined">
-    <div *ngSwitchCase="true" class="transaction">
-      <p class="title">{{ transaction.title }}</p>
-      <p class="metadata">
-        <span class="timestamp">
-          {{ transaction.timestamp | date: "dd MMM yyyy HH:mm:ss" }}
-        </span>
-        <span class="type">
-          {{ transaction.type | uppercase }}
-        </span>
-        <span class="amount">
-          {{ transaction.amount | currency: "KES" }}
-        </span>
-      </p>
-    </div>
+<div class="center-in-view">
+  <div class="card">
+    <button class="back-btn ease-in-out" (click)="goToTransactions()">
+      Back
+    </button>
+    <h2>Transaction ID: {{ transactionID }}</h2>
+    <span [ngSwitch]="transaction !== undefined">
+      <div *ngSwitchCase="true" class="transaction">
+        <p class="title">{{ transaction.title }}</p>
+        <p class="metadata">
+          <span class="timestamp">
+            {{ transaction.timestamp | date: "dd MMM yyyy HH:mm:ss" }}
+          </span>
+          <span class="type">
+            {{ transaction.type | uppercase }}
+          </span>
+          <span class="amount">
+            {{ transaction.amount | currency: "KES" }}
+          </span>
+        </p>
+      </div>
 
-    <p *ngSwitchCase="false">NO TRANSACTION FOUND WITH THAT ID</p>
-  </span>
+      <p *ngSwitchCase="false">NO TRANSACTION FOUND WITH THAT ID</p>
+    </span>
+  </div>
 </div>

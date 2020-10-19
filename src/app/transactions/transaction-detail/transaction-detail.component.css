@@ -1,9 +1,16 @@
-a.back-btn {
-  padding: 2em 0;
+button.back-btn {
+  padding: 1em 0;
   font-weight: bold;
-  opacity: 0.8;
+  color: black;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  opacity: 0.6;
 }
 
-a.back-btn:hover {
+button.back-btn:hover {
   opacity: 1;
 }

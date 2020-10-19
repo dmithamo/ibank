@@ -2,8 +2,8 @@ div.admin-view {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100vh;
   width: 100%;
+  height: 94vh;
   position: relative;
 }
 
@@ -14,7 +14,7 @@ nav.sidebar {
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
+  height: 94vh;
   width: 200px;
   position: sticky;
   left: 0;
