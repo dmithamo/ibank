@@ -6,16 +6,21 @@ import { TransactionsComponent } from './transactions/transactions.component';
 
 const transactionRoutes: Routes = [
   {
-    path: 'transactions/all',
-    component: TransactionsComponent,
-  },
-  {
-    path: 'transactions/create',
-    component: NewTransactionComponent,
-  },
-  {
-    path: 'transactions/:id',
-    component: TransactionDetailComponent,
+    path: 'transactions',
+    children: [
+      {
+        path: 'all',
+        component: TransactionsComponent,
+      },
+      {
+        path: 'create',
+        component: NewTransactionComponent,
+      },
+      {
+        path: ':id',
+        component: TransactionDetailComponent,
+      },
+    ],
   },
   {
     path: 'transactions',

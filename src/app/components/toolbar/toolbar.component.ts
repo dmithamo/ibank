@@ -8,7 +8,7 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   {
-    path: 'transactions',
+    path: 'transactions/all',
     name: 'transactions',
   },
   {

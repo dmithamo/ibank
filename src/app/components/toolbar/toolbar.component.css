@@ -3,7 +3,7 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   font-family: var(--primaryFont);
-  font-size: medium;
+  font-size: small;
   box-shadow: var(--modalShadow);
 }
 
@@ -17,6 +17,7 @@ a {
   text-decoration: none;
   color: inherit;
   margin-right: 1em;
+  text-transform: capitalize;
 }
 
 a.active {
@@ -25,8 +26,8 @@ a.active {
 }
 
 a.cta {
-  border-radius: 10px;
-  padding: 0.75em 1.2em;
+  border-radius: 4px;
+  padding: 1em 1.5em;
   background-color: var(--black);
   color: var(--white);
   text-decoration: none;

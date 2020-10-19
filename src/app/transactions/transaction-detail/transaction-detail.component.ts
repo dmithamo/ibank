@@ -27,6 +27,6 @@ export class TransactionDetailComponent implements OnInit {
   }
 
   goToTransactions() {
-    this.router.navigate(['../', 'all']);
+    this.router.navigate(['../', 'all'], { relativeTo: this.activeRoute });
   }
 }
