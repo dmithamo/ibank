@@ -1,6 +1,9 @@
 <mat-toolbar>
   <app-logo></app-logo>
   <span class="links">
+    <span>
+      <a routerLinkActive="active" routerLink="admin">admin</a>
+    </span>
     <span *ngFor="let item of navItems">
       <a
         routerLinkActive="active"

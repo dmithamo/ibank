@@ -1,6 +1,6 @@
 div.copyright {
   opacity: 0.2;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: auto;
   color: var(--primaryBGColor);
@@ -8,6 +8,7 @@ div.copyright {
   justify-content: center;
   align-items: center;
   width: 100%;
+  z-index: 1000;
 }
 
 div.copyright:hover {
