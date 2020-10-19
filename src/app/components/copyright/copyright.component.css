@@ -12,13 +12,11 @@ div.copyright {
 
 div.copyright:hover {
   opacity: 1;
-  color: var(--white);
+  color: var(--black);
 }
 
 a {
-  padding: 1.2em 2em;
   text-decoration: none;
-  color: var(--inherit);
-  background-color: var(--primaryTextColor);
+  color: inherit;
   border-radius: 10px;
 }
