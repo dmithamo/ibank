@@ -1,0 +1,78 @@
+:root {
+  /* colors */
+  --black: #24272a;
+  --trueBlack: #000;
+  --linkedInBlue: #0e76a8;
+  --gmailRed: #db4a39;
+  --locationYellow: #ffff00;
+  --white: #fff;
+  --offWhite: rgb(209, 209, 209);
+  --grey: #ccc;
+  --red: #ff0000;
+
+  --primaryTextColor: var(--black);
+
+  /* fonts */
+  --primaryFont: "VictorMono Regular";
+  --primaryFontItalic: "VictorMono Italic";
+  --primaryFontBold: "VictorMono Bold";
+
+  /* shadows */
+  --modalShadow: 0 0 2px 2px #00000030;
+}
+
+@font-face {
+  font-family: "VictorMono Regular";
+  src: url("../assets/fonts/VictorMono-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "VictorMono Italic";
+  src: url("../assets/fonts/VictorMono-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "VictorMono Bold";
+  src: url("../assets/fonts/VictorMono-Bold.otf") format("opentype");
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  height: 100%;
+  font-size: small;
+  font-family: var(--primaryFont) !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}
+
+.ease-in-out {
+  transition: ease-in-out all 0.15s;
+}
+
+a {
+  color: inherit;
+}
+
+.center-in-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

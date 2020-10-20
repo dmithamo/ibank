@@ -1,0 +1,42 @@
+mat-toolbar {
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--primaryFont);
+  font-size: small;
+  box-shadow: var(--modalShadow);
+  height: 6vh;
+}
+
+span.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 1em;
+  text-transform: capitalize;
+}
+
+a.active {
+  border-bottom: 2px solid var(--black);
+  font-weight: bold;
+}
+
+a.cta {
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 0;
+}
+
+a.cta:hover,
+a.cta.active {
+  border: none;
+  /* will think of sumthin */
+}

@@ -1,0 +1,12 @@
+:root {
+  --themeTextColor: rgb(65, 65, 65);
+  --themeSecondaryTextColor: #cccccc80;
+  --themeBG: #fafafa;
+  --themeDarker: #1e2f38;
+  --themeAccentColor: #4ef0e0;
+}
+
+body {
+  background-color: var(--themeBG) !important;
+  color: var(--themeTextColor);
+}

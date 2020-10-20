@@ -1,0 +1,15 @@
+<div class="admin-view">
+  <nav class="sidebar">
+    <a
+      *ngFor="let item of navItems"
+      [routerLink]="[item.path]"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ item.name }}</a
+    >
+  </nav>
+
+  <div class="admin-main">
+    <router-outlet></router-outlet>
+  </div>
+</div>

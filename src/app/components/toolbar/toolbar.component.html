@@ -1,1 +1,13 @@
-<p>toolbar works!</p>
+<mat-toolbar>
+  <app-logo></app-logo>
+  <span class="links">
+    <span *ngFor="let item of navItems">
+      <a
+        routerLinkActive="active"
+        [routerLink]="[item.path]"
+        [ngClass]="{ cta: item.isCTA }"
+        >{{ item.name }}</a
+      >
+    </span>
+  </span>
+</mat-toolbar>
