@@ -8,12 +8,19 @@ import { Transaction } from './../../utils/mock-transactions';
   styleUrls: ['./transactions.component.css'],
 })
 export class TransactionsComponent implements OnInit {
-  transactions: Transaction[];
+  transactions: Transaction[] = [];
+  errorMessage: string = '';
 
   constructor(private transactionsService: TransactionsService) {}
 
   getTransactions(): void {
-    this.transactions = this.transactionsService.getTransactions();
+    this.transactionsService.getTransactions().subscribe((res) => {
+      if (res.isSuccess) {
+        this.transactions = res.transactions;
+        return;
+      }
+      this.errorMessage = res.message;
+    });
   }
 
   ngOnInit(): void {

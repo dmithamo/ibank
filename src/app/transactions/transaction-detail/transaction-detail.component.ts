@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TransactionsService } from './../../services/transactions.service';
-import { Transaction } from './../../utils/mock-transactions';
+import {
+  Transaction,
+  TransactionServiceResponse,
+  TransactionsService,
+} from './../../services/transactions.service';
 
 @Component({
   selector: 'app-transaction-detail',
@@ -11,6 +14,7 @@ import { Transaction } from './../../utils/mock-transactions';
 export class TransactionDetailComponent implements OnInit {
   transactionID: string;
   transaction: Transaction = undefined;
+  errorMessage: string = '';
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -23,7 +27,16 @@ export class TransactionDetailComponent implements OnInit {
       this.transactionID = p.get('id');
     });
 
-    this.transaction = this.transactionsService.getByID(this.transactionID);
+    this.transactionsService
+      .getByID(this.transactionID)
+      .subscribe((res: TransactionServiceResponse) => {
+        if (res.isSuccess) {
+          this.transaction = res.transactions[0];
+          return;
+        }
+
+        this.errorMessage = res.message;
+      });
   }
 
   goToTransactions() {
