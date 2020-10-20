@@ -76,3 +76,9 @@ a {
   align-items: center;
   flex-direction: column;
 }
+
+button {
+  font: inherit !important;
+  font-weight: bold !important;
+  padding: 0.4em 2em !important;
+}
