@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { TRANSACTIONS } from './../utils/mock-transactions';
 
 export interface TransactionServiceResponse {
   transactions: Transaction[];
@@ -53,17 +54,17 @@ export class TransactionsService {
       // TODO: Log error to some place with persistent
       console.error(error);
 
-      // if (operation === 'getTransactions') {
-      //   // HIJACK FOR TESTING PURPOSES
-      //   return of(this.constructRes(TRANSACTIONS, error.message, true));
-      // }
-      // if (operation.includes('getByID')) {
-      //   // HIJACK FOR TESTING PURPOSES
-      //   const id = Number(operation.split('::')[1]);
-      //   return of(
-      //     this.constructRes([TRANSACTIONS[id - 1]], error.message, true)
-      //   );
-      // }
+      if (operation === 'getTransactions') {
+        // HIJACK FOR TESTING PURPOSES
+        return of(this.constructRes(TRANSACTIONS, error.message, true));
+      }
+      if (operation.includes('getByID')) {
+        // HIJACK FOR TESTING PURPOSES
+        const id = Number(operation.split('::')[1]);
+        return of(
+          this.constructRes([TRANSACTIONS[id - 1]], error.message, true)
+        );
+      }
       return of(this.constructRes([], error.message, false));
     };
   }
