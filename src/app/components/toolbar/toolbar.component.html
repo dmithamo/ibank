@@ -13,3 +13,8 @@
     <app-auth-btn></app-auth-btn>
   </span>
 </mat-toolbar>
+<mat-progress-bar
+  *ngIf="auth.isLoading$ | async"
+  color="primary"
+  mode="indeterminate"
+></mat-progress-bar>
