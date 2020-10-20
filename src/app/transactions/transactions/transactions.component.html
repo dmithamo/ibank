@@ -1,25 +1,28 @@
-<div class="center-in-view">
+<div class="transactions-view">
   <h2>List of Transactions</h2>
-  <table>
-    <thead>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
       <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Amout</th>
-        <th>Timestamp</th>
-        <th>Details</th>
+        <th scope="col">No.</th>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Timestamp</th>
+        <th scope="col">Details</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transaction of transactions">
+      <tr
+        *ngFor="let transaction of transactions; index as num"
+        [ngClass]="{
+          'table-success': transaction.type === 'CREDIT',
+          'table-danger': transaction.type === 'DEBIT'
+        }"
+      >
+        <th scope="row">{{ num + 1 }}</th>
         <td>{{ transaction.id }}</td>
         <td>{{ transaction.title }}</td>
-        <td
-          [ngClass]="{
-            debit: transaction.type === 'DEBIT',
-            credit: transaction.type === 'CREDIT'
-          }"
-        >
+        <td>
           {{ transaction.amount | currency: "KES" }}
         </td>
         <td>{{ transaction.timestamp | date: "dd MMM yyy HH:mm:ss" }}</td>

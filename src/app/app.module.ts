@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
+import { ClickOutsideModule } from 'ng-click-outside';
 import { environment as env } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { LogoComponent } from './components/logo/logo.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 import { HomeModule } from './home/home.module';
 import { MaterialUIModule } from './material-ui/material-ui.module';
 import { TransactionsModule } from './transactions/transactions.module';
@@ -30,6 +32,7 @@ import { TransactionsModule } from './transactions/transactions.module';
     LogoutButtonComponent,
     AuthBtnComponent,
     LoaderComponent,
+    UserAvatarComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { TransactionsModule } from './transactions/transactions.module';
     MaterialUIModule,
     TransactionsModule,
     HomeModule,
+    ClickOutsideModule,
     AppRoutingModule,
   ],
   providers: [

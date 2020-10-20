@@ -1,0 +1,33 @@
+div.user-avatar {
+  color: rgb(148, 147, 147);
+  position: relative;
+}
+
+img {
+  height: 5vh;
+  cursor: pointer;
+}
+
+div.modal {
+  position: absolute;
+  top: 2em;
+  left: auto;
+  right: 2em;
+
+  height: 32vh;
+  width: 260px;
+
+  box-shadow: var(--modalShadow);
+  border-radius: 5px;
+  background-color: white;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.modal img {
+  height: 15vh;
+}
