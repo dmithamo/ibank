@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
-import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthBtnComponent } from './components/auth-btn/auth-btn.component';
@@ -37,14 +36,10 @@ import { TransactionsModule } from './transactions/transactions.module';
     BrowserAnimationsModule,
     AuthModule.forRoot({
       ...env.auth,
-      httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/messages/protected-message`],
-      },
     }),
     MaterialUIModule,
     TransactionsModule,
     HomeModule,
-    AdminModule,
     AppRoutingModule,
   ],
   providers: [
