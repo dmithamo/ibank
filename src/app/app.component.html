@@ -1,5 +1,12 @@
-<app-copyright></app-copyright>
-<app-toolbar></app-toolbar>
-<div class="main-container">
-  <router-outlet></router-outlet>
+<div class="all-the-things">
+  <div class="loader-container" *ngIf="auth.isLoading$ | async; else loaded">
+    <app-loader></app-loader>
+  </div>
+  <ng-template #loaded>
+    <app-toolbar></app-toolbar>
+    <div class="main-container">
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+  <app-copyright></app-copyright>
 </div>

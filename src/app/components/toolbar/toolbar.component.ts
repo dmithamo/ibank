@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './../../services/auth.service';
 
 interface NavItem {
   path: string;
@@ -19,17 +18,6 @@ const NAV_ITEMS: NavItem[] = [
     name: 'transactions',
     needsAuth: true,
   },
-  {
-    path: 'sign-in',
-    name: 'sign in',
-    needsAuth: false,
-  },
-  {
-    path: 'sign-up',
-    name: 'sign up',
-    isCTA: true,
-    needsAuth: false,
-  },
 ];
 
 @Component({
@@ -38,17 +26,9 @@ const NAV_ITEMS: NavItem[] = [
   styleUrls: ['./toolbar.component.css'],
 })
 export class ToolbarComponent implements OnInit {
-  constructor(public authService: AuthService) {}
+  constructor() {}
   get navItems(): Array<NavItem> {
-    const isAuthenticated = this.authService.isAuthenticated;
-    return NAV_ITEMS.filter((n) => {
-      if (!n.needsAuth) {
-        return n;
-      }
-      if (n.needsAuth && !isAuthenticated) {
-        return;
-      }
-    });
+    return NAV_ITEMS;
   }
   ngOnInit(): void {}
 }

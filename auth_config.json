@@ -1,0 +1,6 @@
+{
+  "domain": "dev-r4myihyv.eu.auth0.com",
+  "clientId": "5BxtwIiHAzuBxmWA8aqdCikeUvOvUuz0",
+  "audience": "ibank-api-v1",
+  "serverUrl": "http://localhost:6060"
+}
