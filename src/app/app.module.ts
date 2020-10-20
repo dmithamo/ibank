@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AuthBtnComponent } from './components/auth-btn/auth-btn.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
+import { InlineErrorComponent } from './components/inline-error/inline-error.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
 import { LogoComponent } from './components/logo/logo.component';
@@ -33,6 +34,7 @@ import { TransactionsModule } from './transactions/transactions.module';
     AuthBtnComponent,
     LoaderComponent,
     UserAvatarComponent,
+    InlineErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { TransactionsModule } from './transactions/transactions.module';
     HomeModule,
     ClickOutsideModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     {

@@ -1,0 +1,8 @@
+div.errors {
+  color: red;
+  width: fit-content;
+  background: rgba(255, 0, 0, 0.3);
+  padding: 3em;
+  border-radius: 5px;
+  border: 2px solid red;
+}

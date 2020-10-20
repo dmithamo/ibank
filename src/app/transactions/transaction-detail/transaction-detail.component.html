@@ -1,26 +1,47 @@
-<div class="center-in-view">
-  <div class="">
-    <button class="back-btn ease-in-out" (click)="goToTransactions()">
+<div class="">
+  <div class="" style="padding: 2em">
+    <button
+      style="
+        width: fit-content !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      "
+      class="btn btn-link"
+      (click)="goToTransactions()"
+    >
       Back
     </button>
     <h2>Transaction ID: {{ transactionID }}</h2>
-    <span [ngSwitch]="transaction !== undefined">
-      <div *ngSwitchCase="true" class="transaction">
-        <p class="title">{{ transaction.title }}</p>
-        <p class="metadata">
-          <span class="timestamp">
-            {{ transaction.timestamp | date: "dd MMM yyyy HH:mm:ss" }}
-          </span>
-          <span class="type">
-            {{ transaction.type | uppercase }}
-          </span>
-          <span class="amount">
+    <div
+      *ngIf="transaction !== undefined"
+      class="card"
+      style="
+        width: 25rem;
+        padding: 1em;
+        box-shadow: 1px 1px 2px 2px rgab(0, 0, 0, 0.3);
+      "
+    >
+      <h2 class="card-title">{{ transaction.title }}</h2>
+      <div class="card-body">
+        <div class="card-text">
+          <h3 class="amount">
             {{ transaction.amount | currency: "KES" }}
-          </span>
-        </p>
-      </div>
+          </h3>
 
-      <p *ngSwitchCase="false">NO TRANSACTION FOUND WITH THAT ID</p>
-    </span>
+          <p class="timestamp">
+            {{ transaction.timestamp | date: "dd MMM yyyy HH:mm:ss" }}
+          </p>
+          <p class="type">
+            {{ transaction.type | uppercase }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p *ngIf="transaction === undefined && errorMessage === ''">
+      NO TRANSACTION FOUND WITH THAT ID
+    </p>
+
+    <app-errors *ngIf="errorMessage !== ''" [error]="errorMessage"></app-errors>
   </div>
 </div>

@@ -2,7 +2,12 @@ div.transactions-view {
   padding: 2em;
 }
 table {
-  width: 50%;
+  width: fit-content;
+}
+
+th,
+td {
+  padding: 1.3em 2em;
 }
 
 h2 {
