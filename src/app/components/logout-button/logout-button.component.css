@@ -1,0 +1,15 @@
+button {
+  font: inherit;
+  font-weight: bold;
+  background: none;
+  outline: none;
+  color: inherit;
+  border: 1px solid #ccc;
+  padding: 0.3em 2em;
+}
+
+button:hover {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}

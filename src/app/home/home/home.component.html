@@ -1,0 +1,4 @@
+<app-user-dashboard *ngIf="auth.isAuthenticated$ | async"></app-user-dashboard>
+<app-landing-page
+  *ngIf="(auth.isAuthenticated$ | async) === false"
+></app-landing-page>

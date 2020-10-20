@@ -1,5 +1,10 @@
-<app-copyright></app-copyright>
 <app-toolbar></app-toolbar>
-<div class="main-container">
+<div
+  [ngClass]="{
+    'main-container': true,
+    'blur-all-things': (auth.isLoading$ | async)
+  }"
+>
   <router-outlet></router-outlet>
 </div>
+<app-copyright></app-copyright>
