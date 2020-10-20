@@ -81,4 +81,5 @@ button {
   font: inherit !important;
   font-weight: bold !important;
   padding: 0.4em 2em !important;
+  width: 100% !important;
 }

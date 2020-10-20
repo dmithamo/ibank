@@ -1,0 +1,24 @@
+<div
+  (clickOutside)="closeModal()"
+  *ngIf="auth.user$ | async as user"
+  class="user-avatar"
+>
+  <img
+    (click)="toggleModal()"
+    [src]="user.picture"
+    alt="user's avatar"
+    class="rounded-circle z-depth-2 img-fluid profile-picture"
+  />
+
+  <div *ngIf="showModal" class="modal">
+    <img
+      (click)="toggleModal()"
+      [src]="user.picture"
+      alt="user's avatar"
+      class="rounded-circle z-depth-2 img-fluid profile-picture"
+    />
+    <span>{{ user.email }}</span>
+    <button (click)="closeModal()" class="btn btn-light">Close</button>
+    <app-logout-button style="width: 100%"></app-logout-button>
+  </div>
+</div>

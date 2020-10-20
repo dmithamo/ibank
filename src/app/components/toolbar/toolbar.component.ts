@@ -23,13 +23,12 @@ const NAV_ITEMS: NavItem[] = [
 })
 export class ToolbarComponent implements OnInit {
   isAuthenticated: boolean;
-  constructor(public auth: AuthService) {
+  constructor(public auth: AuthService) {}
+
+  get navItems(): Array<NavItem> {
     this.auth.isAuthenticated$.subscribe((authenticated) => {
       this.isAuthenticated = authenticated;
     });
-  }
-
-  get navItems(): Array<NavItem> {
     return NAV_ITEMS.filter((n) => !n.needsAuth || this.isAuthenticated);
   }
   ngOnInit(): void {}
