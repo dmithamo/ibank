@@ -25,7 +25,7 @@ be installed on your machine
 
 ### Features
 
-The ibank app is a web-based service designed for the management of one's bank account. It allows users to
+The ibank app is a web-based service designed for the management of one's bank account. It will allow users to
 
 - view their account balance
 - view their account statement, presented as a history of trasnsactions
@@ -48,6 +48,9 @@ The record of transactions for this user is then retrieved.
 A user must confirm ownership of an email address by clicking on a verification link sent to the email address on login, or by entering a verification code.
 
 ### Data Models
+
+#### Note
+The bank end is developed in a separate repo (link coming soon).
 
 The app achieves data persistence using a MySQL database.
 It has tables for Users, Transactions and Accounts.
@@ -88,7 +91,8 @@ WIP
 WIP
 
 
-### TODO
+### TODO (Roadmap)
 
-- implement 2fa properly
-- add more features in the app (analytics on accounts, capacity to add multiple accounts from different banks, etc)
+- implement 2fa properly. Consider using AT's API to send SMS on login, and also using an Authenticator App
+- complete feature list as described in `will allow user to` above.
+- add more features in the app (analytics on accounts, capacity to add multiple accounts from different banks by plugging in those banks' APIs, capacity to plug in Mpesa using the Mpesa API, etc)
